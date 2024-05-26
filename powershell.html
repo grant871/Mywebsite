@@ -60,29 +60,28 @@ table, th, td {
     </div>
   </div>
 
-  
-  <!-- Powershell Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="powershell">
-    <h2 class="w3-wide">Powershell</h2>
-  <h1>What is powershell?</h1>
-    <p>PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS.</p>
 
-<table style="width:100%">
-  <tr>
-    <td>Remove folder</td>
-    <td>Search C:\</td>
-    <td>Stop a Process</td>
-  </tr>
-  <tr>
-    <td>Remove-Item -Path "C:\Program Files\Video Lan" -Recurse -Force</td>
-    <td>Get-ChildItem -Path C:\ -Filter "firefox" -Recurse -ErrorAction SilentlyContinue -Force</td>
-    <td>Stop-Process -Name "notepad"</td>
-  </tr>
-</table>
+  <!-- Powershell -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="vuln">
+    <h2 class="w3-wide w3-center">Powershell Scripts</h2>
+<p>Removing Folders from a file System</p>
+    <h2>Remove-Item -Path "C:\Program Files\Video Lan" -Recurse -Force</h2>
+<p>The above script can be used to removed a folder from a windows file system. Why is there a focus for doing this - well if some or a an automated system has not removed a program correctly but a vulnerability detector stil detects the program this is one way we can ensure the .exe is not present to be exploited.</p>
+    <p>Often used on first time clients</p>
+    <p style="background-color:powderblue;">Windows</p>
+<hr>
+<p>Search the C:\ using Powershell</p>
+    <h2>Get-ChildItem -Path C:\ -Filter "firefox" -Recurse -ErrorAction SilentlyContinue -Force</h2>
+<p>This can only be used if your on the system - unless you can get something back via intune this script is only useful when you have remoted onto a system. </p>
+    <p>Constantly used to figure out if an application or .dll exists</p>
+    <p style="background-color:powderblue;">Windows</p>
     
-  </div>
+<hr>
 
+    Add more
   
+      </div>
+ 
 
 </body>
 </html>
