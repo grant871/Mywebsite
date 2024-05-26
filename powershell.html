@@ -50,10 +50,15 @@ table, th, td {
 <p>The above script can be used to removed a folder from a windows file system. Why is there a focus for doing this - well if some or a an automated system has not removed a program correctly but a vulnerability detector stil detects the program this is one way we can ensure the .exe is not present to be exploited.</p>
     <p>Often used on first time clients</p>
     <p style="background-color:powderblue;">Windows</p>
-    
 <hr>
-
     <p>Remove .net 5 EOL/p>
+    <h2>dotnet-core-uninstallremove 5.0.17 --runtime --yes --verbosity q </h2>
+      <h2>Remove-Item -Path "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\5.0.17"</h2>
+<p>The above script can only be used if the .net uninstall tool is install on the remote machines - I have installed the uninstall tool on users machines first then fired this script via intune</p>
+    <p>Often used on first time clients who wouldn't know .net 5 is installed within their tenant without detection software</p>
+    <p style="background-color:powderblue;">Windows</p>
+<hr>
+    <p>Remove .net 5 EOL</p>
     <h2>dotnet-core-uninstallremove 5.0.17 --runtime --yes --verbosity q </h2>
       <h2>Remove-Item -Path "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\5.0.17"</h2>
 <p>The above script can only be used if the .net uninstall tool is install on the remote machines - I have installed the uninstall tool on users machines first then fired this script via intune</p>
