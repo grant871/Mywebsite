@@ -41,9 +41,15 @@ table, th, td {
     <h2 class="w3-wide w3-center">Powershell Scripts</h2>
 <p>Search the C:\ using Powershell</p>
     <h2>Get-ChildItem -Path C:\ -Filter "firefox" -Recurse -ErrorAction SilentlyContinue -Force</h2>
-<p>This can only be used if your on the system - unless you can get something back via intune this script is only useful when you have remoted onto a system. </p>
-    <p>Constantly used to figure out if an application or files exist</p>
-    <p style="background-color:powderblue;">Windows</p>  
+<p>How do I know what version of a driver I have installed?</p>
+<p></p>On Windows, look in Add or remove programs. The version is shown with the installed package. Additionally, you can look at the file properties of the installed files and inspect the Product Version field in the Details. Here are the main files for each driver:</p>
+<br>
+<ul>
+<li>Microsoft ODBC Driver 17 for SQL Server - %Windir%\system32\msodbcsql17.dll</li>
+<li>Microsoft ODBC Driver 18 for SQL Server - %Windir%\system32\msodbcsql18.dll</li>
+<li>Microsoft OLE DB Driver 18 for SQL Server - %Windir%\system32\msoledbsql.dll</li>
+<li>Microsoft OLE DB Driver 19 for SQL Server - %Windir%\system32\msodlebsql19.dll</li>
+</ul>
 <hr>
       </div>
  
