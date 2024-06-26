@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CyberSecurity Journey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+table, th, td {
+  border:1px solid black;
+}
+  
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">about</a>
+  <a href="#vdr" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">vdr</a>
+  <a href="#latest" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">New Vulnerabilites</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+
+  <!-- Powershell -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="vuln">
+    <img src="script.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="width:60%">
+    <h2 class="w3-wide w3-center">Powershell Scripts</h2>
+<p>Search the C:\ using Powershell</p>
+    <h2>Get-ChildItem -Path C:\ -Filter "firefox" -Recurse -ErrorAction SilentlyContinue -Force</h2>
+<p>This can only be used if your on the system - unless you can get something back via intune this script is only useful when you have remoted onto a system. </p>
+    <p>Constantly used to figure out if an application or files exist</p>
+    <p style="background-color:powderblue;">Windows</p>  
+<hr>
+<p>Removing Folders from a file System</p>
+    <h2>Remove-Item -Path "C:\Program Files\Video Lan" -Recurse -Force</h2>
+<p>The above script can be used to removed a folder from a windows file system. Why is there a focus for doing this - well if some or a an automated system has not removed a program correctly but a vulnerability detector stil detects the program this is one way we can ensure the .exe is not present to be exploited.</p>
+    <p>Often used on first time clients</p>
+    <p style="background-color:powderblue;">Windows</p>
+<hr>
+    <p>Remove .net 5 EOL</p>
+    <h2>dotnet-core-uninstallremove 5.0.17 --runtime --yes --verbosity q </h2>
+      <h2>Remove-Item -Path "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\5.0.17"</h2>
+<p>The above script can only be used if the .net uninstall tool is install on the remote machines - I have installed the uninstall tool on users machines first then fired this script via intune</p>
+    <p>Often used on first time clients who wouldn't know .net 5 is installed within their tenant without detection software</p>
+    <p style="background-color:powderblue;">Windows</p>
+<hr>
+    <p>Changing and updating registry</p>
+    <h2>Adding New Item - DWord</h2>
+    <p>New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Services\HTTP\Parameters' -Name "EnableHttp2Cleartext" -Value 0 Force"</p>
+    <p>New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Services\HTTP\Parameters' -Name "EnableHttp2Tls" -Value 0 Force"</p>
+    <p>Everything that is unless specified when injecting into the registry will automatically be a dword and not a string etc..</p>
+    <p>The above script deters a ddos attack on .net core - it is also updated/patched via a windows update</p>
+    
+    <h2>Adding New Item - string</h2>
+    <p>Often used on first time clients who wouldn't know .net 5 is installed within their tenant without detection software</p>
+    <p style="background-color:powderblue;">Windows</p>
+    
+      </div>
+ 
+
+</body>
+</html>
