@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+table, th, td {
+  border:1px solid black;
+}
+  
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">about</a>
+  <a href="#vdr" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">vdr</a>
+  <a href="#latest" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">New Vulnerabilites</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+
+  <!-- Powershell -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="vuln">
+    <img src=".png" class="w3-round w3-margin-bottom" alt="Picture Here" style="width:60%">
+    <h2 class="w3-wide w3-center">Understanding How this all works!</h2>
+<p>SQL is specific and so is the way you update the ODBC and OLE DB Driver</p>
+    <h2>Microsoft ODBC Driver and Microsoft OLE DB Driver</h2>
+<p>How do I know what version of a driver I have installed?</p>
+<p></p>On Windows, look in Add or remove programs. The version is shown with the installed package. Additionally, you can look at the file properties of the installed files and inspect the Product Version field in the Details. Here are the main files for each driver:</p>
+<br>
+<ul>
+<li>Microsoft ODBC Driver 17 for SQL Server - %Windir%\system32\msodbcsql17.dll</li>
+<li>Microsoft ODBC Driver 18 for SQL Server - %Windir%\system32\msodbcsql18.dll</li>
+<li>Microsoft OLE DB Driver 18 for SQL Server - %Windir%\system32\msoledbsql.dll</li>
+<li>Microsoft OLE DB Driver 19 for SQL Server - %Windir%\system32\msodlebsql19.dll</li>
+</ul>
+<h1>Vulnerability Result</h1>    
+<p>%SystemRoot%\System32\msodbcsql19.dll version is 19.3.2.0.</p>
+</p>%SystemRoot%\Syswow64\msodbcsql19.dll version is 19.3.2.0.</p>
+<p>All major versions of the SQL driver ODBC and OLE need to be kept and not removed - if you remove the major version it will stop SQL AGENT from running when the machine is restarted</p>
+<hr>
+      </div>
+ 
+
+</body>
+</html>
