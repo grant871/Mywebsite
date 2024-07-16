@@ -42,10 +42,20 @@ table, th, td {
       <p class="w3-opacity w3-center"><i>Edge and chrome become vulnerable all the time and have zero day threats whereby users can 
       exploit the web browsers code to execute remote code or malicious maleware.</i></p>
 
+
+      <h1>Latest way of updating Edge</h1>
+
+      <p>[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"</p>
+      <p>md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null</p>
+      <p>$Download = join-path $env:temp\edgeinstall MicrosoftEdgeEnterpriseX64.msi</p>
+      <p>Invoke-WebRequest 'http://go.microsoft.com/fwlink/?LinkID=2093437'  -OutFile $Download</p>
+      <p>Start-Process "$Download" -ArgumentList "/quiet"</p>
+      
+     <p style="background-color:powderblue;">Windows <i style="font-size:24px" class="fa">&#xf17a;</i></p> 
+    <hr>
+      
     <img src="edge1.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="max-width:800px">
-
-    <img src="edge2.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="max-width:800px">
-
+      
     <h2>Updating Edge fron a standalone installer</h2>
     <p>cd %homepath%\Desktop</p>
     <p> MsiExec.exe /i MicrosoftEdgeEnterpriseX64.msi /qn</p>
