@@ -39,24 +39,31 @@ table, th, td {
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="vuln">
     <img src="odbc.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="width:60%">
     <h2 class="w3-wide w3-center">Understanding How this all works!</h2>
-<p>SQL is specific and so is the way you update the ODBC and OLE DB Driver</p>
-    <h2>Microsoft ODBC Driver and Microsoft OLE DB Driver</h2>
-<p>How do I know what version of a driver I have installed?</p>
-<p></p>On Windows, look in Add or remove programs. The version is shown with the installed package. Additionally, you can look at the file properties of the installed files and inspect the Product Version field in the Details. Here are the main files for each driver:</p>
-<br>
-<ul>
-<li>Microsoft ODBC Driver 17 for SQL Server - %Windir%\system32\msodbcsql17.dll</li>
-<li>Microsoft ODBC Driver 18 for SQL Server - %Windir%\system32\msodbcsql18.dll</li>
-<li>Microsoft OLE DB Driver 18 for SQL Server - %Windir%\system32\msoledbsql.dll</li>
-<li>Microsoft OLE DB Driver 19 for SQL Server - %Windir%\system32\msodlebsql19.dll</li>
-</ul>
-<h1>Vulnerability Result</h1>    
-    <h2>Example of version 19.3.2.0 being detected</h2>
-<p>%SystemRoot%\System32\msodbcsql19.dll version is 19.3.2.0.</p>
-</p>%SystemRoot%\Syswow64\msodbcsql19.dll version is 19.3.2.0.</p>
-<p>All major versions of the SQL driver ODBC and OLE need to be kept and not removed - if you remove the major version it will stop SQL AGENT from running when the machine is restarted</p>
-   <p> https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16#1935</P>
-<hr>
+
+Microsoft Windows Security Update for July 2024
+
+Applying update manually using the script below : 
+
+Copy msu file over to server – checking the kb is correct for the server that have remoted onto. 
+
+Open CMD with Elevated permissions – Run as Administrator 
+
+Cd %homepath%\Desktop
+
+wusa.exe windows10.0-kb5040430-x64_9879d14c817a7aec56b0ae1f73daecc7a678b3aa.msu /quiet /norestart
+
+    <img src="wusa.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="width:60%">
+
+    Each KB article is for each version of windows server : - 
+
+KB5040430
+KB5040437
+KB5040434
+
+These type of updates are being applied in LCS on the last servers that are not being automated. 
+
+By running the above update with the commands in place stops the update from rebooting the server allowing the administrator to reboot at another time where possible. Stopping random reboots. In short supressing windows update. 
+
       </div>
  
 
