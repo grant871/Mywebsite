@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>W3.CSS Template</title>
+<title>CyberSecurity Journey</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -35,29 +35,32 @@ table, th, td {
 </div>
 
 
-  <!-- ODBC -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="vuln">
-    <img src="odbc.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="width:60%">
-    <h2 class="w3-wide w3-center">Understanding How this all works!</h2>
-<p>SQL is specific and so is the way you update the ODBC and OLE DB Driver</p>
-    <h2>Microsoft ODBC Driver and Microsoft OLE DB Driver</h2>
-<p>How do I know what version of a driver I have installed?</p>
-<p></p>On Windows, look in Add or remove programs. The version is shown with the installed package. Additionally, you can look at the file properties of the installed files and inspect the Product Version field in the Details. Here are the main files for each driver:</p>
-<br>
-<ul>
-<li>Microsoft ODBC Driver 17 for SQL Server - %Windir%\system32\msodbcsql17.dll</li>
-<li>Microsoft ODBC Driver 18 for SQL Server - %Windir%\system32\msodbcsql18.dll</li>
-<li>Microsoft OLE DB Driver 18 for SQL Server - %Windir%\system32\msoledbsql.dll</li>
-<li>Microsoft OLE DB Driver 19 for SQL Server - %Windir%\system32\msodlebsql19.dll</li>
-</ul>
-<h1>Vulnerability Result</h1>    
-    <h2>Example of version 19.3.2.0 being detected</h2>
-<p>%SystemRoot%\System32\msodbcsql19.dll version is 19.3.2.0.</p>
-</p>%SystemRoot%\Syswow64\msodbcsql19.dll version is 19.3.2.0.</p>
-<p>All major versions of the SQL driver ODBC and OLE need to be kept and not removed - if you remove the major version it will stop SQL AGENT from running when the machine is restarted</p>
-   <p> https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16#1935</P>
-<hr>
-      </div>
+  <!-- Chrome-->
+  <div class="w3-black" id="vdr">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Chrome Updates Galour</h2>
+      <p class="w3-opacity w3-center"><i>Chrome and Edge become vulnerable all the time and have zero day threats whereby users can 
+      exploit the web browsers code to execute remote code or malicious maleware.</i></p>
+
+
+      <h1>Latest way of updating Google Chrome</h1>
+
+      <p>$LocalTempDir = $env:TEMP; $ChromeInstaller = "ChromeInstaller.exe"; (new-object    System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe', "$LocalTempDir\$ChromeInstaller"); & "$LocalTempDir\$ChromeInstaller" /silent /install; $Process2Monitor =  "ChromeInstaller"; Do { $ProcessesFound = Get-Process | ?{$Process2Monitor -contains $_.Name} | Select-Object -ExpandProperty Name; If ($ProcessesFound) { "Still running: $($ProcessesFound -join ', ')" | Write-Host; Start-Sleep -Seconds 2 } else { rm "$LocalTempDir\$ChromeInstaller" -ErrorAction SilentlyContinue -Verbose } } Until (!$ProcessesFound)</p>
+    
+     <p style="background-color:powderblue;">Windows <i style="font-size:24px" class="fa">&#xf17a;</i></p> 
+    <hr>
+      
+    <img src="chrome.png" class="w3-round w3-margin-bottom" alt="Picture Here" style="max-width:800px">
+      
+    <h2>Updating chrome fron a standalone installer</h2>
+    <p>cd %homepath%\Desktop</p>
+    <p> MsiExec.exe /i googlechromestandaloneenterprise64.msi /qn</p>
+    <p style="background-color:powderblue;">Windows <i style="font-size:24px" class="fa">&#xf17a;</i></p> 
+    <hr>
+    </div>
+
+
+  </div>
  
 
 </body>
